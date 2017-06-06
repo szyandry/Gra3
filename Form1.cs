@@ -15,6 +15,19 @@ namespace Gra3
         public Form1()
         {
             InitializeComponent();
+            timer1.Enabled = true;
+            Cursor.Hide();
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.TopMost = true;
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+
+            paletka.Top = boisko.Bottom - (boisko.Bottom / 10);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }
