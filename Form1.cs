@@ -33,6 +33,18 @@ namespace Gra3
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            paletka.Left = Cursor.Position.X - (paletka.Width/2);
+            pilka.Left += speed_left;
+            pilka.Top += speed_top;
+            if (pilka.Bottom >= paletka.Top && pilka.Bottom <= paletka.Bottom &&  pilka.Left >=paletka.Left &&pilka.Right <=paletka.Right)
+
+            {
+                speed_top += 2;
+                speed_left += 2;
+                speed_top = -speed_top;
+                point += 1;
+            }
+
 
         }
 
