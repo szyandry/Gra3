@@ -12,6 +12,12 @@ namespace Gra3
 {
     public partial class Form1 : Form
     {
+        public int speed_left = 4;
+        public int speed_top = 4;
+        public int point = 0;
+
+
+
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +34,11 @@ namespace Gra3
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode ==Keys.Escape) { this.Close(); }
         }
     }
 }
