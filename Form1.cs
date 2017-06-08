@@ -44,7 +44,23 @@ namespace Gra3
                 speed_top = -speed_top;
                 point += 1;
             }
+            if (pilka.Left <= boisko.Left)
+            {
+                speed_left = -speed_left;
+            }
+            if (pilka.Right >= boisko.Right)
+            {
+                speed_left = -speed_left;
+            }
+            if (pilka.Top <= boisko.Top)
+            {
+                speed_top = -speed_top;
+            }
 
+            if (pilka.Bottom >= boisko.Bottom)
+            {
+                timer1.Enabled = false;
+            }
 
         }
 
