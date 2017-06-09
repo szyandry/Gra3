@@ -14,7 +14,7 @@ namespace Gra3
     {
         public int speed_left = 4;
         public int speed_top = 4;
-        public int point = 0;
+        public int points = 0;
 
 
 
@@ -29,6 +29,9 @@ namespace Gra3
             this.Bounds = Screen.PrimaryScreen.Bounds;
 
             paletka.Top = boisko.Bottom - (boisko.Bottom / 10);
+            gameover_lbl.Left = (boisko.Width / 2) - (gameover_lbl.Width);
+            gameover_lbl.Top = (boisko.Height / 2) - (gameover_lbl.Height / 2);
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -42,7 +45,8 @@ namespace Gra3
                 speed_top += 2;
                 speed_left += 2;
                 speed_top = -speed_top;
-                point += 1;
+                points += 1;
+                points_lbl.Text = points.ToString();
             }
             if (pilka.Left <= boisko.Left)
             {
@@ -68,5 +72,7 @@ namespace Gra3
         {
             if (e.KeyCode ==Keys.Escape) { this.Close(); }
         }
+
+        
     }
 }
