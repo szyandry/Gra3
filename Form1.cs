@@ -31,7 +31,7 @@ namespace Gra3
             paletka.Top = boisko.Bottom - (boisko.Bottom / 10);
             gameover_lbl.Left = (boisko.Width / 2) - (gameover_lbl.Width);
             gameover_lbl.Top = (boisko.Height / 2) - (gameover_lbl.Height / 2);
-
+            gameover_lbl.Visible = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -64,6 +64,7 @@ namespace Gra3
             if (pilka.Bottom >= boisko.Bottom)
             {
                 timer1.Enabled = false;
+                gameover_lbl.Visible = true;
             }
 
         }
@@ -71,6 +72,17 @@ namespace Gra3
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode ==Keys.Escape) { this.Close(); }
+            if (e.KeyCode == Keys.F)
+            {
+                pilka.Top = 50;
+                pilka.Left = 50;
+                speed_left = 4;
+                speed_top = 4;
+                points = 0;
+                points_lbl.Text = "0";
+                timer1.Enabled = true;
+                gameover_lbl.Visible = false;
+            }
         }
 
         

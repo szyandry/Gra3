@@ -51,7 +51,7 @@
             this.boisko.Dock = System.Windows.Forms.DockStyle.Fill;
             this.boisko.Location = new System.Drawing.Point(0, 0);
             this.boisko.Name = "boisko";
-            this.boisko.Size = new System.Drawing.Size(622, 369);
+            this.boisko.Size = new System.Drawing.Size(739, 382);
             this.boisko.TabIndex = 0;
             // 
             // gameover_lbl
@@ -59,11 +59,11 @@
             this.gameover_lbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gameover_lbl.AutoSize = true;
             this.gameover_lbl.Font = new System.Drawing.Font("Impact", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gameover_lbl.Location = new System.Drawing.Point(225, 74);
+            this.gameover_lbl.Location = new System.Drawing.Point(283, 81);
             this.gameover_lbl.Name = "gameover_lbl";
-            this.gameover_lbl.Size = new System.Drawing.Size(170, 156);
+            this.gameover_lbl.Size = new System.Drawing.Size(166, 156);
             this.gameover_lbl.TabIndex = 4;
-            this.gameover_lbl.Text = "Game Over\r\n\r\nF1 - Restart\r\nEsc - Exit";
+            this.gameover_lbl.Text = "Game Over\r\n\r\nF - Restart\r\nEsc - Exit";
             this.gameover_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // points_lbl
@@ -113,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 369);
+            this.ClientSize = new System.Drawing.Size(739, 382);
             this.Controls.Add(this.boisko);
             this.Name = "Form1";
             this.Text = "Form1";
